@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import "animate.css";
+
+@tailwind utilities;
+
+@font-face {
+    font-family: 'JetBrains Mono Regular';
+    src: url("font/JetBrainsMono-2.304/fonts/webfonts/JetBrainsMono-Regular.woff2") format('woff'),
+    url("font/JetBrainsMono-2.304/fonts/ttf/JetBrainsMono-Regular.ttf") format('truetype');
+
+}
+
+@theme {
+    --font-jetbrain: "JetBrains Mono Regular", "serif";
+    --breakpoint-s: 480px;
+    --breakpoint-m: 768px;
+    --breakpoint-l: 1280px;
+    --breakpoint-xl: 1440px;
+    --breakpoint-2xl: 1920px;
+    --color-primary: #ef4b39;
+    --color-secondary: #001932;
+    --color-redContrast: #E22712;
+    --color-quaternary: rgba(207, 203, 171, 0);
+    --color-quinary: #E3E9DD;
+    --color-bg-black: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    font-family: 'JetBrains Mono Regular', serif;
+}
+
+body {
+    background-color: var(--color-secondary);
+}
+
+.logo-spin {
+    animation: logo-spin 4s linear infinite;
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.nav-link {
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover, .active-link {
+    color: white;
+    text-shadow: -1px -1px 0 var(--color-primary),
+    1px -1px 0 var(--color-primary),
+    -1px 1px 0 var(--color-primary),
+    1px 1px 0 var(--color-primary),
+    -2px -2px 0 var(--color-primary),
+    2px -2px 0 var(--color-primary),
+    -2px 2px 0 var(--color-primary),
+    2px 2px 0 var(--color-primary),
+    -3px -3px 0 var(--color-primary),
+    3px -3px 0 var(--color-primary),
+    -3px 3px 0 var(--color-primary),
+    -3px 3px 0 var(--color-primary),
+    -4px -4px 0 var(--color-primary),
+    4px -4px 0 var(--color-primary),
+    -4px 4px 0 var(--color-primary),
+    -4px 4px 0 var(--color-primary),
+    -5px -5px 0 var(--color-primary),
+    5px -5px 0 var(--color-primary),
+    -5px 5px 0 var(--color-primary),
+    -5px 5px 0 var(--color-primary);
+}
+
+.icon:hover {
+    color: var(--color-primary);
+}
+
+.devIcon {
+    font-size: 2.813rem;
+}
+
+@media screen and (min-width: 1280px) {
+    .devIcon {
+        font-size: 4rem;
+    }
+}
+
+.no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.Toastify__toast-container {
+    max-width: 90vw !important;
+}
+
+@media (max-width: 470px) {
+    .Toastify__toast-container {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        right: auto !important;
+    }
+}
+
+.Toastify__toast--info {
+    background-color: var(--color-primary) !important;
+    color: var(--color-secondary) !important;
+    font-weight: bold !important;
+}
+
+.Toastify__toast--info .Toastify__toast-icon svg {
+    fill: var(--color-secondary) !important;
+}
+
+.Toastify__close-button {
+    color: black !important;
+}
+
+.Toastify__progress-bar {
+    background-color: rgb(4, 39, 69) !important;
+}
